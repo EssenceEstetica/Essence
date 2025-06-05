@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Etiquetas meta -->
+  <meta name="description"
+    content="Essence es tu centro de estética integral. Tratamientos faciales, corporales, depilación definitiva y osteopatía en un ambiente profesional y relajante. Descubrí el bienestar que merecés.">
+  <meta name="keywords"
+    content="centro de estética, estética facial, estética corporal, depilación definitiva, osteopatía, tratamientos de belleza, Essence, belleza para mujeres, belleza para hombres, rejuvenecimiento, cuidado de la piel, tratamientos faciales, peeling, lifting, masajes, spa, masajes relajantes">
+  <meta name="Bonfigli María Emilia" content="Essence Centro de Estética">
+  <meta name="robots" content="index, follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Vínculos CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
+
+  <!-- (Font-awesome) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <!-- (Google Font) https://fonts.google.com/specimen/Assistant -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;600;700;800" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+
+  <!-- (Boostrap) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <!-- icon/titulo ventana: -->
+  <link rel="icon" href="./Imagenes/Logos/icon.png">
+  <title>Essence Estética</title>
+
+  <!-- Font-awesome -->
+  <script src="https://kit.fontawesome.com/847028c37f.js" crossorigin="anonymous"></script>
+
+  <!-- Boostrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <a href="#top"><button id="botonSubir" title="Subir" onclick="changeActiveLink(event)">▲</button></a>
+
+  <header class="header">
+    <div class="logo">
+      <a href="index.html">
+        <img src="./imagenes/logos/logo_black.png" alt="Logo Black Essence">
+      </a>
+    </div>
+    <nav>
+
+      <!-- Checkbox menú sandwich -->
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn"><i class="fas fa-bars"></i></label>
+
+      <!-- Menú de navegación -->
+      <ul class="nav-links">
+        <li><a href="#sobre-nosotros" onclick="changeActiveLink(event)">Nosotros</a></li>
+        <li><a href="#tratamientos" onclick="changeActiveLink(event)">Tratamientos</a></li>
+        <li><a href="#ubicacion-horarios" onclick="changeActiveLink(event)">Ubicación</a></li>
+        <li><a href="#ubicacion-horarios" onclick="changeActiveLink(event)">Horarios</a></li>
+        <li><a href="https://wa.me/5493547572880" onclick="changeActiveLink(event)">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <!-- Desactiva el check cuando seleccionamos una opcion-->
+    <script>
+      const checkbox = document.getElementById('check');
+      const menuItems = document.querySelectorAll('.nav-links li a');
+      menuItems.forEach(item => {
+        item.addEventListener('click', () => {
+          checkbox.checked = false;
+        });
+      });
+
+      function changeActiveLink(event) {
+        // Eliminar la clase "active" de todos los enlaces
+        var links = document.querySelectorAll('.nav-links a');
+        links.forEach(function (link) {
+          link.classList.remove('active');
+        });
+        // Agregar la clase "active" al enlace seleccionado
+        event.target.classList.add('active');
+      }
+    </script>
+  </header>
+
+  <section class="portada">
+    <div class="portada-overlay">
+      <h1 class="essence-logo">Essence</h1>
+      <h3 class="subtitulo"><b>Centro de estética</b></h3>
+      <p class="slogan">El arte de llevar la <span><em>belleza</em></span> contigo</p>
+    </div>
+  </section>
+
+  <main>
+    <section id="sobre-nosotros">
+      <div class="texto-sobre">
+        <h2>Sobre <em>Essence</em></h2>
+        <p>
+          En <strong>Essence</strong> te invitamos a redescubrir el equilibrio entre cuerpo y bienestar. Somos un centro
+          unisex que ofrece servicios de <strong>estética facial y corporal</strong>, así como también
+          <strong>osteopatía</strong>, en un entorno cuidado, profesional y relajado.
+        </p>
+        <p>
+          Nuestro enfoque está en que te sientas a gusto con vos mismo, brindándote un espacio integral donde la
+          <strong>calma</strong>, el <strong>cuidado personal</strong> y la <strong>confianza</strong> se encuentren en
+          un solo lugar.
+        </p>
+
+        <a href="#productos" class="boton-magico">Descubrí la magia de nuestros tratamientos</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Servicios -->
+  <div id="tratamientos" class="centrar-mensaje">
+    <div class="mensaje">
+      <h2>Nuestros Tratamientos</h2>
+      <strong>Elegí el tratamiento que mejor se adapte a vos y consultanos para obtener una entrevista
+        personalizada.</strong>
+      <p>Juntos diseñaremos el plan ideal, pensado en tus necesidades y metas para realzar tu belleza y bienestar.</p>
+    </div>
+  </div>
+
+  <!-- Servicio Facial -->
+  <section class="service-section first">
+    <div class="service-image">
+      <img src="imagenes/servicios/facial/img_facial.webp"
+        alt="Tratamiento facial en rostro de mujer, imagen ilustrativa del servicio de estética facial">
+    </div>
+    <div class="service-content">
+      <h2>Tratamientos Faciales</h2>
+      <p>Mejorá tu piel con nuestros tratamientos personalizados adaptados a cada tipo de rostro.</p>
+      <div class="treatments-list margen">
+        <ul>
+          <li><strong>Peeling:</strong> renueva tu piel eliminando células muertas y mejora su textura.</li>
+          <li><strong>Lifting:</strong> reafirma la piel y mejora su firmeza sin cirugía.</li>
+          <li><strong>Antiarrugas:</strong> reduce líneas de expresión y arrugas.</li>
+          <li><strong>Manchas:</strong> disminuye manchas y unifica el tono de la piel.</li>
+          <li><strong>Limpieza facial:</strong> limpia profundamente y purifica el rostro.</li>
+        </ul>
+      </div>
+      <a class="btn_1" href="https://wa.me/5493547572880">Consultar</a>
+    </div>
+  </section>
+
+  <!-- Servicio Corporal -->
+  <section class="service-section reversed">
+    <div class="service-image">
+      <img src="imagenes/servicios/corporal/img_corp.webp"
+        alt="Tratamiento corporal en abdomen, imagen ilustrativa del servicio de estética corporal">
+    </div>
+    <div class="service-content">
+      <h2>Tratamientos Corporales</h2>
+      <p>Redefiní tu figura y mejorá tu piel con nuestros tratamientos corporales personalizados.</p>
+      <div class="treatments-list">
+        <ul>
+          <li><strong>Anticelulíticos:</strong> reducen la apariencia de la celulitis y alisan la piel.</li>
+          <li><strong>Reductor:</strong> ayuda a disminuir grasa localizada y moldear el cuerpo.</li>
+          <li><strong>Lifting corporal:</strong> mejora la firmeza y tono de la piel.</li>
+          <li><strong>Tratamiento de estrías:</strong> atenúa marcas y mejora la textura de la piel.</li>
+          <li><strong>Depilación definitiva:</strong> Elimina el vello de manera permanente.</li>
+        </ul>
+      </div>
+      <a class="btn_2" href="https://wa.me/5493547572880">Consultar</a>
+    </div>
+  </section>
+
+  <!-- Servicio Osteopatía -->
+  <section class="service-section">
+    <div class="service-image">
+      <img src="imagenes/servicios/osteo/img-osteo.webp"
+        alt="Mujer recibiendo un masaje osteopático en camilla, imagen ilustrativa del servicio de osteopatía">
+    </div>
+    <div class="service-content">
+      <h2>Osteopatía</h2>
+      <p>Recuperá tu movilidad y bienestar a través de técnicas manuales suaves y personalizadas.</p>
+      <div class="treatments-list margen">
+        <ul>
+          <li><strong>Osteopatía estructural:</strong> para dolores musculares y articulares.</li>
+          <li><strong>Masajes descontracturantes:</strong> alivian contracturas y rigidez muscular.</li>
+          <li><strong>Masajes relajantes:</strong> para calmar tensiones y mejorar la circulación.</li>
+        </ul>
+      </div>
+      <a class="btn_1" href="https://wa.me/5493547572880">Consultar</a>
+    </div>
+  </section>
+
+  <!-- Maps y Horarios -->
+  <section id="ubicacion-horarios" class="info-container">
+    <div class="box">
+      <h2>Ubicación</h2>
+      <p>Nos encontramos en Esquina 3 de Febrero 96, Alta Gracia, Córdoba.</p>
+      <iframe class="map-style"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3396.011288802087!2d-64.4342358!3d-31.6609109!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x942d50cb00297681%3A0x9a3ffefc8b242a81!2s3%20de%20Febrero%2096%2C%20X5186CBB%20Alta%20Gracia%2C%20C%C3%B3rdoba!5e0!3m2!1ses-419!2sar!4v1749072997011!5m2!1ses-419!2sar"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="box">
+      <h2>Horarios de atención</h2>
+      <p>Podés escribirnos para conocer más en los siguientes días y horarios:</p>
+      <ul class="horarios">
+        <li><strong>Lunes:</strong> 09:00 a 20:00</li>
+        <li><strong>Martes:</strong> 09:00 a 20:00</li>
+        <li><strong>Miércoles:</strong> 09:00 a 20:00</li>
+        <li><strong>Jueves:</strong> 09:00 a 20:00</li>
+        <li><strong>Viernes:</strong> 09:00 a 20:00</li>
+        <li><strong>Sábado:</strong> Cerrado</li>
+        <li><strong>Domingo:</strong> Cerrado</li>
+      </ul>
+      <p class="nota">Escribinos, ¡Responderemos pronto!</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div class="container-fluid footer">
+    <div class="fondo_footer row p-5 text-white">
+      <div class="col-xs-1 col-md-4 col-lg-4 mb-3">
+        <a href="index.html">
+          <img id="logo-vert" src="./imagenes/logos/logo.png" alt="Logo White Essence">
+        </a>
+      </div>
+      <div class="col-xs-12 col-md-4 col-lg-4 mb-3 copy">
+        <p class="copy">Copyright - Bonfigli María Emilia © 2025</p>
+        <p class="copy">Versión 1.0.0</p>
+      </div>
+      <div class="col-xs-12 col-md-4 col-lg-4 mb-3">
+        <ul id="icons" class="d-flex justify-content-center">
+          <li class="me-3"><a href="https://wa.me/5493547572880"><i class="fa-brands fa-whatsapp"></i></a></li>
+          <li class="me-3"><a
+              href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fessence.esteticaag%2F%3Fhl%3Des&is_from_rle"><i
+                class="fa-brands fa-instagram"></i></a></li>
+          <li><a href="https://www.facebook.com/tu_usuario" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

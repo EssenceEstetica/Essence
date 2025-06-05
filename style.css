@@ -1,0 +1,593 @@
+/* ===========================
+   VARIABLES Y FUENTES
+   =========================== */
+
+:root {
+  /* Colores */
+  --color-texto: #333333;
+  --color-fondo: #E3D1C3;
+  --color-primario: #5D3422;
+  --color-secundario: #9A765C;
+  --color-acento: #452A15;
+  --color-fondo-claro: #D6BCAD;
+  --color-fondo-oscuro: #d69e90;
+  --color-blanco: white;
+  --color-negro: black;
+  /* Fuente */
+  --fuente-principal: 'Assistant', sans-serif;
+}
+
+* {
+  font-family: var(--fuente-principal);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER */
+.header {
+  background-color: var(--color-fondo);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 85px;
+  padding: 5px 5%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-bottom: 3px solid var(--color-secundario);
+  width: 100%;
+  z-index: 999;
+}
+
+.header .logo img {
+  height: 90px;
+  width: auto;
+  margin-top: 5%;
+  cursor: pointer;
+}
+
+.header .nav-links {
+  padding-left: 0%;
+}
+
+.header .nav-links li {
+  display: inline-block;
+  margin: 50px;
+  margin-top: 8%;
+}
+
+.header .nav-links a {
+  position: relative;
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: var(--color-texto);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.header .nav-links a:hover {
+  color: var(--color-texto);
+}
+
+.header .nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background: var(--color-texto);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.4s ease;
+}
+
+.header .nav-links a:hover::after {
+  transform: scaleX(1);
+}
+
+.nav-links a.active {
+  color: var(--color-secundario);
+}
+
+.checkbtn {
+  display: none;
+  font-size: 30px;
+  color: var(--color-texto);
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+}
+
+.checkbtn:hover {
+  color: var(--color-secundario);
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+label {
+  cursor: pointer;
+}
+
+label i {
+  display: none;
+}
+
+input[type="checkbox"]:checked+label i {
+  display: inline;
+}
+
+/* PORTADA */
+.portada {
+  position: relative;
+  height: 75vh;
+  background-image: url('./imagenes/fondos/fondo1.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Recuadro blanco */
+.portada-overlay {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 40px 60px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+  max-width: 90%;
+  backdrop-filter: blur(6px);
+}
+
+.essence-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.5em;
+  font-weight: 600;
+  margin: 0 0 10px;
+  color: var(--color-texto);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.portada-overlay:hover .essence-logo {
+  color: var(--color-fondo-oscuro);
+}
+
+/* Línea inferior */
+.essence-logo::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  margin: 10px auto 0;
+  background-color: var(--color-texto);
+  transform: scaleX(0.8);
+  transform-origin: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.portada-overlay:hover .essence-logo::after {
+  transform: scaleX(1);
+  background-color: var(--color-fondo-oscuro);
+}
+
+/* Subtítulo */
+.subtitulo {
+  font-size: 1.5em;
+  margin: 15px 0 15px;
+  font-weight: 300;
+  color: #444;
+}
+
+/* Slogan */
+.slogan {
+  font-size: 1.2em;
+  color: #555;
+}
+
+.slogan span {
+  font-weight: 600;
+  color: var(--color-acento);
+}
+
+
+/* SOBRE NOSOTROS */
+#sobre-nosotros,
+#portada_facial {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  min-height: 600px;
+}
+
+#sobre-nosotros {
+  background-image: url('./imagenes/fondos/fondo2.png');
+}
+
+#portada_facial {
+  background-image: url('./imagenes/servicios/facial/portada_facial.webp');
+}
+
+.texto-sobre {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: var(--color-texto);
+}
+
+.texto-sobre h2 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.texto-sobre p {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.boton-magico {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.7rem 1.4rem;
+  background-color: transparent;
+  color: var(--color-texto);
+  border: 2px solid var(--color-texto);
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.boton-magico:hover {
+  background-color: var(--color-blanco);
+  color: var(--color-negro);
+  border-color: var(--color-negro);
+}
+
+#botonSubir {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: var(--color-acento);
+  color: var(--color-blanco);
+  opacity: 80%;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#botonSubir:hover {
+  background-color: var(--color-primario);
+}
+
+/* SERVICIOS */
+.centrar-mensaje {
+  background: #f9f7f6;
+  color: #444;
+  display: flex;
+  justify-content: center;
+  /* Centra horizontalmente */
+  margin-top: 50px;
+}
+
+.mensaje {
+  max-width: 800px;
+  background: #fff;
+  padding: 30px 40px;
+  border: 1px solid var(--color-fondo-claro);
+  text-align: center;
+}
+
+.mensaje h2 {
+  color: var(--color-fondo-oscuro);
+  font-size: 3.5rem;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.mensaje strong {
+  color: var(--color-texto);
+  font-size: 1.3rem;
+  line-height: 1.6;
+}
+
+.mensaje p {
+  color: var(--color-texto);
+  font-size: 1.3rem;
+  line-height: 1.6;
+}
+
+.service-section {
+  display: flex;
+  max-width: 1400px;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.service-section.first {
+  margin-top: 30px;
+}
+
+.service-section.reversed {
+  flex-direction: row-reverse;
+}
+
+.service-image {
+  flex: 1;
+  max-width: 800px;
+  max-height: 590px;
+  overflow: hidden;
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.service-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+/* Padding izquierdo por defecto */
+.service-content h2,
+.service-content p,
+.service-content .treatments-list ul li {
+  padding-left: 30px;
+}
+
+/* Para secciones reversed, usamos padding derecho */
+.service-section.reversed .service-content h2,
+.service-section.reversed .service-content p,
+.service-section.reversed .service-content .treatments-list ul li {
+  padding-left: 0;
+  padding-right: 30px;
+}
+
+.service-section.reversed .service-content .treatments-list ul li {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.service-content h2 {
+  color: var(--color-acento);
+  margin-bottom: 16px;
+  font-size: 3.1rem;
+}
+
+.service-content p {
+  color: var(--color-primario);
+  margin-bottom: 20px;
+  line-height: 1.5;
+  max-width: 550px;
+  font-size: 1.6rem;
+}
+
+.treatments-list ul {
+  list-style: none;
+  padding-left: 30px;
+  margin: 0;
+}
+
+.treatments-list li {
+  position: relative;
+  margin-bottom: 14px;
+  font-size: 1.3rem !important;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* Texto destacado */
+.treatments-list li strong {
+  color: var(--color-primario);
+  font-weight: 600;
+}
+
+.treatments-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.treatments-list ul li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 14px;
+  font-size: 1.2rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+.treatments-list ul li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0.15em;
+  color: var(--color-primario);
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.margen {
+  margin-left: 30px;
+}
+
+.service-content a {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.7rem 1.4rem;
+  background-color: transparent;
+  color: var(--color-texto);
+  border: 2px solid var(--color-texto);
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.service-content a:hover {
+  background-color: var(--color-fondo);
+  color: var(--color-negro);
+  border-color: var(--color-negro);
+}
+
+.service-content .btn_1 {
+  margin: 15px 30px 0px;
+}
+
+.service-content .btn_2 {
+  margin: 15px 0px 0px;
+}
+
+/* Añade un fondo y borde a cada sección de servicio */
+.service-section {
+  display: flex;
+  max-width: 1400px;
+  align-items: center;
+  margin: 0 auto 0 auto;
+  overflow: hidden;
+}
+
+
+/* MAPA Y HORARIOS */
+.info-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
+  gap: 3rem;
+  padding: 4rem 2rem;
+  background-image: url('./imagenes/fondos/fondo3.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.box {
+  background-color: var(--color-fondo);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.09);
+  padding: 2.5rem;
+  flex: 1 1 420px;
+  max-width: 550px;
+}
+
+.box:first-child {
+  flex: 1 1 600px;
+  max-width: 650px;
+}
+
+.box h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--color-acento);
+}
+
+.box p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: var(--color-texto);
+}
+
+.nota {
+  margin-top: 2rem;
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--color-primario);
+}
+
+.map-style {
+  width: 100%;
+  height: 450px;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.horarios {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.horarios li {
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--color-fondo-claro);
+}
+
+/* FOOTER */
+.fondo_footer {
+  background-color: var(--color-secundario);
+}
+
+.footer {
+  margin-top: 0;
+}
+
+.footer .row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer img {
+  width: 150px;
+  height: 150px;
+}
+
+.footer p {
+  text-align: center;
+}
+
+#icons {
+  margin: 0px;
+  display: flex;
+  list-style-type: none;
+}
+
+#icons li a {
+  font-size: 2em;
+  margin: 10px;
+  color: var(--color-blanco);
+}
+
+#icons li a:hover {
+  color: var(--color-acento);
+}
+
+.copy {
+  color: var(--color-blanco);
+}

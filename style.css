@@ -131,7 +131,7 @@ input[type="checkbox"]:checked+label i {
 .portada {
   position: relative;
   height: 75vh;
-  background-image: url('./imagenes/fondos/fondo1.png');
+  background-image: url('./imagenes/fondos/fondo1.webp');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -218,7 +218,7 @@ input[type="checkbox"]:checked+label i {
 }
 
 #sobre-nosotros {
-  background-image: url('./imagenes/fondos/fondo2.png');
+  background-image: url('./imagenes/fondos/fondo2.webp');
 }
 
 #portada_facial {
@@ -488,7 +488,7 @@ input[type="checkbox"]:checked+label i {
   margin-top: 50px;
   gap: 3rem;
   padding: 4rem 2rem;
-  background-image: url('./imagenes/fondos/fondo3.png');
+  background-image: url('./imagenes/fondos/fondo3.webp');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

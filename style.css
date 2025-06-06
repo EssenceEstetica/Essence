@@ -496,7 +496,7 @@ input[type="checkbox"]:checked+label i {
 }
 
 .box {
-  background-color: var(--white);
+  background-color: var(--color-blanco);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.09);
   padding: 2.5rem;
   flex: 1 1 420px;

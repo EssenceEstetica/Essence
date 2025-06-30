@@ -60,7 +60,7 @@ main {
 .header .nav-links li {
   display: inline-block;
   margin: 50px;
-  margin-left: 10px;
+  margin-right: 25px;
   margin-top: 8%;
 }
 

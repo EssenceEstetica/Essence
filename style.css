@@ -293,8 +293,6 @@ input[type="checkbox"]:checked+label i {
 
 /* SERVICIOS */
 .centrar-mensaje {
-  background: #f9f7f6;
-  color: #444;
   display: flex;
   justify-content: center;
   /* Centra horizontalmente */

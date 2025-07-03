@@ -1,0 +1,211 @@
+/* ==========
+   RESPOSIVE
+   ========== */
+
+@media(max-width:1450px) {
+  #sobre-nosotros {
+    flex-direction: column;
+  }
+
+  #sobre-nosotros .text-sn {
+    margin: 5%;
+    width: 80%;
+  }
+
+  #sobre-nosotros ul h1 {
+    font-size: 3em;
+  }
+
+  #sobre-nosotros ul h3 {
+    font-size: 2.5em;
+  }
+
+  #sobre-nosotros ul p {
+    font-size: 1.3em;
+  }
+
+  #sobre-nosotros ul h4 {
+    font-size: 1.1em;
+  }
+
+  .service-section {
+    flex-direction: column;
+    max-width: 90%;
+    margin: 30px auto;
+  }
+
+  .service-section.reversed {
+    flex-direction: column;
+  }
+
+  .margen {
+    margin-left: 0px;
+  }
+
+  .mensaje {
+    max-width: 600px;
+  }
+
+  .mensaje h2 {
+    font-size: 3rem;
+  }
+
+  .mensaje strong {
+    font-size: 1.1rem;
+  }
+
+  .mensaje p {
+    font-size: 1.1rem;
+  }
+
+  .service-image {
+    max-width: 600px;
+    max-height: 500px;
+  }
+
+  .service-content {
+    padding-top: 20px;
+  }
+
+  .service-content h2,
+  .service-content p,
+  .service-content .highlights {
+    padding-left: 0;
+  }
+
+  .service-section.reversed .service-content h2,
+  .service-section.reversed .service-content p,
+  .service-section.reversed .service-content .highlights {
+    padding-right: 0;
+  }
+
+  .service-content .btn_1 {
+    margin-left: 0;
+  }
+
+  .service-content h2 {
+    font-size: 2.8rem;
+  }
+
+  .service-content p {
+    font-size: 1.4rem;
+  }
+
+  .treatments-list li {
+    font-size: 1.2rem !important;
+  }
+
+}
+
+@media(max-width:1300px) {
+  .checkbtn {
+    display: block;
+  }
+
+  .header .nav-links {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-fondo-claro);
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+
+  .header .nav-links li {
+    display: block;
+    margin: 7%;
+  }
+
+  .header .nav-links li a {
+    font-size: 22px;
+  }
+
+  #check:checked~ul {
+    left: 0;
+  }
+
+  #tel {
+    display: block;
+  }
+
+  .texto-sobre h2 {
+    font-size: 3rem;
+  }
+
+  .texto-sobre p {
+    font-size: 1.3rem;
+  }
+
+  .boton-magico {
+    font-size: 1.3rem;
+  }
+}
+
+@media(max-width:980px) {
+  .grid-container {
+    height: 400px;
+  }
+
+  .service-content h2 {
+    font-size: 2.5rem;
+  }
+
+  .service-content p {
+    font-size: 1.2rem;
+  }
+
+  .treatments-list li {
+    font-size: 1.1rem !important;
+  }
+}
+
+@media(max-width:772px) {
+  .footer img {
+    display: none;
+  }
+}
+
+@media(max-width:768px) {
+  .texto-sobre h2 {
+    font-size: 2.5rem;
+  }
+
+  .texto-sobre p {
+    font-size: 1.1rem;
+  }
+
+  .boton-magico {
+    font-size: 1.1rem;
+  }
+
+  #logo-vert {
+    display: none;
+  }
+  
+}
+
+@media(max-width:500px) {
+  #sobre-nosotros .text-sn {
+    margin: 3%;
+    margin-top: 80px;
+    width: 95%;
+  }
+
+  #sobre-nosotros ul h1 {
+    font-size: 2.9em;
+  }
+
+  #sobre-nosotros ul h3 {
+    font-size: 1.9em;
+  }
+
+  #sobre-nosotros ul p {
+    font-size: 1.2em;
+  }
+
+  #sobre-nosotros ul h4 {
+    font-size: 1em;
+  }
+}

@@ -153,11 +153,12 @@ input[type="checkbox"]:checked+label i {
 }
 
 .essence-logo {
-  width: 200px; /* ajustá el tamaño según tu diseño */
+  width: 200px;
   height: auto;
   display: block;
-  margin: 0 auto 10px;
-  transition: filter 0.3s ease;
+  margin: 20px auto;
+  border: 2px solid red; /* para visualizar el borde del logo */
+  background-color: white;
 }
 
 .portada-overlay:hover .essence-logo {

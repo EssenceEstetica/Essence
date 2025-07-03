@@ -153,36 +153,15 @@ input[type="checkbox"]:checked+label i {
 }
 
 .essence-logo {
-  font-family: 'Great Vibes', cursive;
-  font-size: 4.5em;
-  margin: 0 0 10px;
-  color: var(--color-texto);
-  letter-spacing: 1px;
-  position: relative;
-  transition: color 0.3s ease;
-  text-transform: none; /* mejor sin uppercase para fuentes script */
+  width: 200px; /* ajustá el tamaño según tu diseño */
+  height: auto;
+  display: block;
+  margin: 0 auto 10px;
+  transition: filter 0.3s ease;
 }
 
 .portada-overlay:hover .essence-logo {
-  color: var(--color-secundario);
-}
-
-/* Línea inferior */
-.essence-logo::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 2px;
-  margin: 10px auto 0;
-  background-color: var(--color-texto);
-  transform: scaleX(0.8);
-  transform-origin: center;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.portada-overlay:hover .essence-logo::after {
-  transform: scaleX(1);
-  background-color: var(--color-secundario);
+  filter: brightness(0) saturate(100%) sepia(50%) hue-rotate(250deg); /* ejemplo de cambio de color si querés */
 }
 
 /* Subtítulo */
